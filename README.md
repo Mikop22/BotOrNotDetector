@@ -22,7 +22,7 @@ Level-2 stacking pipeline for bot detection using three complementary base learn
 Run the three notebooks **sequentially** in this exact order:
 
 ### Step 1: `bot_detector.ipynb`
-- Loads training datasets (`dataset.posts&users.{30-33}.json` + `dataset.bots.{30-33}.txt`)
+- Loads training datasets (`dataset.posts&users.{30-33}.json` + `dataset.bots.{30-33}.txt`) (make sure it's in same directory)
 - Builds 35 metadata/temporal features per user
 - Runs 5-fold stratified XGBoost CV
 - **Exports:** `rgcn_features/xgb_features.npz` (OOF leaf features + labels + author IDs)
@@ -39,7 +39,7 @@ Run the three notebooks **sequentially** in this exact order:
 - Trains a logistic regression meta-learner on 8 stacked features (auto-selects raw vs calibrated variant via nested CV, tunes regularization C)
 - Runs full-data training for deployment
 - Runs inference on new unseen data (`dataset.posts&users.34.json`, etc.)
-- **Exports:** `predicted_bots.txt` (one bot ID per line, competition submission format)
+- **Exports:** `predicted_bots.txt` 
 
 ## Environment
 
