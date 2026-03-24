@@ -4,7 +4,7 @@ Level-2 stacking pipeline for bot detection using three complementary base learn
 
 | Model | Signal | Features |
 |-------|--------|----------|
-| **XGBoost** | Metadata & temporal | 35 hand-crafted features |
+| **XGBoost** | Metadata & temporal | 35 features |
 | **XLM-RoBERTa** | Linguistic | Fine-tuned on post text |
 | **BotRGCN** | Relational | GNN on behavioural kNN graph |
 | **Meta-Learner** | Stacked | 8 features (3 probs + interactions + disagreement) |
