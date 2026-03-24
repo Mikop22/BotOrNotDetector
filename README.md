@@ -1,7 +1,5 @@
 # Bot Detector Stacking Ensemble
 
-Level-2 stacking pipeline for bot detection using three complementary base learners and a logistic regression meta-learner:
-
 | Model | Signal | Features |
 |-------|--------|----------|
 | **XGBoost** | Metadata & temporal | 35 features |
